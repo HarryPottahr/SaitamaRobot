@@ -22,7 +22,7 @@ class AFK(BASE):
         return "afk_status for {}".format(self.user_id)
 
 
-classs afk_time(BASE):
+class afk_time(BASE):
     __tablename__= "afk_time"
     afk_time = Column(Integer)
 
