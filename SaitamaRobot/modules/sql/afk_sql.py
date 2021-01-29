@@ -11,7 +11,7 @@ class AFK(BASE):
     is_afk = Column(Boolean)
     reason = Column(UnicodeText)
     afk_time = Column(Integer)
-
+    
     def __init__(self, user_id, afk_time, reason="", is_afk=True):
         self.user_id = user_id
         self.afk_time = afk_time
@@ -21,6 +21,10 @@ class AFK(BASE):
     def __repr__(self):
         return "afk_status for {}".format(self.user_id)
 
+
+classs afk_time(BASE):
+    __tablename__= "afk_time"
+    afk_time = Column(Integer)
 
 AFK.__table__.create(checkfirst=True)
 INSERTION_LOCK = threading.RLock()
