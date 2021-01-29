@@ -27,6 +27,7 @@ INSERTION_LOCK = threading.RLock()
 
 AFK_USERS = {}
 
+afk_time.__table__.create(checkfirst=true)
 
 def is_afk(user_id):
     return user_id in AFK_USERS
