@@ -79,7 +79,7 @@ And the following:
 SAITAMA_IMG = "https://telegra.ph/file/1deef79ec9a0823d098ee.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-Saitama is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
+Voldemort is clone of saitama which is based on code of marie so,
 You can donate to the original writer of the Base code, Paul
 There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
 
@@ -199,7 +199,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="☑️ Add Saitama to your group",
+                            text="☑️ Add Voldemort to your group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
@@ -209,17 +209,17 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🔔 Updates Channel",
-                             url="https://t.me/OnePunchUpdates")
+                             url="https://t.me/AvadaKavadara")
                      ],
                      [
                          InlineKeyboardButton(
                              text="🧾 Getting started guide",
-                             url="https://t.me/OnePunchUpdates/29")
+                             url="https://t.me/AvadaKavadara/3")
                      ],
                      [
                          InlineKeyboardButton(
                              text="🗄 Source code",
-                             url="https://github.com/AnimeKaizoku/SaitamaRobot")
+                             url="https://github.com/HarryPottahr/SaitamaRobot/tree/master/SaitamaRobot")
                      ]]))
     else:
         update.effective_message.reply_text(
