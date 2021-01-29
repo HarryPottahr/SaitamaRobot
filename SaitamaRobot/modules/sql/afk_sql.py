@@ -24,7 +24,7 @@ class AFK(BASE):
 
 class afk_time(BASE):
     __tablename__= "afk_time"
-    afk_time = Column(Integer)
+    afk_time = Column(Integer, primary_key=True)
 
 AFK.__table__.create(checkfirst=True)
 INSERTION_LOCK = threading.RLock()
