@@ -1,6 +1,6 @@
 import threading
 
-from YuiiChan.modules.sql import BASE, SESSION
+from SaitamaRobot.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, UnicodeText
 
 
