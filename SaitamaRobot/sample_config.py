@@ -50,7 +50,7 @@ class Config(object):
     DEL_CMDS = True  #Delete commands that users dont have access to, like delete /ban if a non admin uses it.
     STRICT_GBAN = True
     WORKERS = 8  # Number of subthreads to use. Set as number of threads your processor uses
-    BAN_STICKER = ''  # banhammer marie sticker id, the bot will send this sticker before banning or kicking a user in chat.
+    BAN_STICKER = ' CAACAgUAAx0CTvWCVgACAR1gFQV3AikrnMhSeUycg92e2SVoNwAChwEAAmylwVZuzsJPlhC25x4E'  # banhammer marie sticker id, the bot will send this sticker before banning or kicking a user in chat.
     ALLOW_EXCL = True  # Allow ! commands as well as / (Leave this to true so that blacklist can work)
     CASH_API_KEY = 'awoo'  # Get your API key from https://www.alphavantage.co/support/#api-key
     TIME_API_KEY = 'awoo'  # Get your API key from https://timezonedb.com/api
