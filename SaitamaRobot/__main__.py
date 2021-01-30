@@ -76,7 +76,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/1deef79ec9a0823d098ee.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/dbad0f9320f49c508961f.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Voldemort is clone of saitama which is based on code of marie so,
