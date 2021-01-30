@@ -1,6 +1,6 @@
 import threading
 
-from SaitamaRobot.modules.sql import BASE, SESSION
+from YuiiChan.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, UnicodeText
 
 
@@ -10,7 +10,8 @@ class AFK(BASE):
     user_id = Column(Integer, primary_key=True)
     is_afk = Column(Boolean)
     reason = Column(UnicodeText)
-    
+    afk_time = Column(Integer)
+
     def __init__(self, user_id, afk_time, reason="", is_afk=True):
         self.user_id = user_id
         self.afk_time = afk_time
@@ -21,16 +22,11 @@ class AFK(BASE):
         return "afk_status for {}".format(self.user_id)
 
 
-class afk_time(BASE):
-    __tablename__= "afk_time"
-    afk_time = Column(Integer, primary_key=True)
-
 AFK.__table__.create(checkfirst=True)
 INSERTION_LOCK = threading.RLock()
 
 AFK_USERS = {}
 
-afk_time.__table__.create(checkfirst=True)
 
 def is_afk(user_id):
     return user_id in AFK_USERS
