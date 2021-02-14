@@ -240,7 +240,12 @@ def weebify(update: Update, context: CallbackContext):
         message.reply_to_message.reply_text(string)
     else:
         message.reply_text(string)
-
+        
+        
+def quote(update: Update, context: CallbackContext):
+    message = update.effective_message
+    message.reply_text(random.choice(fun_strings.Quo)
+    message.delete()
 
 __help__ = """
  • `/runs`*:* reply a random string from an array of replies
