@@ -244,9 +244,8 @@ def weebify(update: Update, context: CallbackContext):
         
 def quote(update: Update, context: CallbackContext):
     message = update.effective_message
-    message.reply_text(random.choice(fun_strings.Quo)
-    message.delete()
-
+    message.reply_text(random.choice(fun_strings.Quote)
+                       
 __help__ = """
  • `/runs`*:* reply a random string from an array of replies
  • `/slap`*:* slap a user, or get slapped if not a reply
@@ -262,6 +261,7 @@ __help__ = """
  • `/sanitize`*:* always use this before /pat or any contact
  • `/pat`*:* pats a user, or get patted
  • `/8ball`*:* predicts using 8ball method 
+ • `/Quote`*:* gibs nothing just for test
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
@@ -278,6 +278,7 @@ EIGHTBALL_HANDLER = DisableAbleCommandHandler("8ball", eightball)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
+QUOTE_HANDLER = DisableAbleCommandHandler("Quote",quote)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 dispatcher.add_handler(SHOUT_HANDLER)
@@ -293,6 +294,7 @@ dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
+dispatcher.add_handler(QUOTE_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
